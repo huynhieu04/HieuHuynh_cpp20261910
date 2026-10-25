@@ -31,9 +31,9 @@ int main(void) {    // Hàm main: chương trình bắt đầu chạy từ đây
     // In MSSV dạng số nguyên, điểm với 2 chữ số sau dấu thập phân
     printf("MSSV: %d, diem: %.2f\n", mssv, diem);
 
-    // bài 1 : yêu cầu user nhập vào 1 kí tự bất kì
-    // in ra màn hình console kí tự đó hệ 10
-    // in ra màn hình console kí tự đó hệ 16
+    //// bài 1 : yêu cầu user nhập vào 1 kí tự bất kì
+    //// in ra màn hình console kí tự đó hệ 10
+    //// in ra màn hình console kí tự đó hệ 16
 
     char kytu;
 
@@ -79,10 +79,55 @@ int main(void) {    // Hàm main: chương trình bắt đầu chạy từ đây
         printf("Phep tinh tich:  %f \n", (a * b));
         printf("Phep tinh thuong:  %f \n", (a / b));
 
+    }
 
 
+
+    //KẾT HỢP CÁC CÂU LỆNH WHILE, FOR AND IF TRONG MỘT BÀI TOÁN
+    
+    int a, b;
+
+    char continues = 'y';
+
+    while (continues == 'y' || continues == 'Y') {
+
+        for (int i = 1; i <=3; i++)
+        {
+
+            printf("**** Program Is Run ******  \n");
+
+            //hiển thị lần tính toán thứ mấy
+            printf("******* The Calculator Number: %d *******\n", i);
+
+            //nhập số nguyên a và b
+            printf("Input An Integer a:  \n");
+            scanf_s("%d", &a);
+             
+            printf("Input An Integer b:  \n");
+            scanf_s("%d", &b);
+            // nhập các phép tính + - * /
+
+            printf("*** Calculation addition: %d \n", a + b);
+            printf("*** Calculation subtraction: %d  \n", a - b);
+            printf("*** Calculation multiplication: %d \n", a * b);
+
+            // kiểm tra b có đủ điều kiện tính toán không
+            if (b!=0)
+            {
+                printf("*** Calculation division: %.2f\n", (float)a / b);
+
+            }
+            else {
+                printf("*** Can't divide by 0 ! ");
+            }
+
+        }
+        // hỏi người dùng có muốn tiếp tục chương trình tính toán
+        printf("**** Would Like You To Continue To The Program ? (Y/N) \n");
+        scanf_s(" %c", &continues, 1);
 
     }
+    printf("Finish Program");
 
     return 0;  // Kết thúc chương trình thành công
 }

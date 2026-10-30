@@ -36,128 +36,128 @@ int main(void) {    // Hàm main: chương trình bắt đầu chạy từ đây
     ////// in ra màn hình console kí tự đó hệ 10
     ////// in ra màn hình console kí tự đó hệ 16
 
-    //char kytu;
+    char kytu;
 
-    //printf("nhap vap 1 ky tu bat ky:  ");
+    printf("nhap vap 1 ky tu bat ky:  ");
 
-    //scanf_s("%c \n", &kytu, 1);
+    scanf_s("%c \n", &kytu, 1);
 
-    //printf("Ma ky tu he 10:  %d \n", (unsigned char)kytu);
+    printf("Ma ky tu he 10:  %d \n", (unsigned char)kytu);
 
-    //printf("Ma ky tu he 16: %x \n", (unsigned char)kytu);
+    printf("Ma ky tu he 16: %x \n", (unsigned char)kytu);
 
-    //for (int i = 1; i <= 6; i++)
-    //{
-    //    char kytu;
+    for (int i = 1; i <= 6; i++)
+    {
+        char kytu;
 
-    //    printf("nhap vap 1 ky tu bat ky:  ");
+        printf("nhap vap 1 ky tu bat ky:  ");
 
-    //    scanf_s("%c \n", &kytu, 1);
+        scanf_s("%c \n", &kytu, 1);
 
-    //    printf("Ma ky tu he 10:  %d \n", (unsigned char)kytu);
+        printf("Ma ky tu he 10:  %d \n", (unsigned char)kytu);
 
-    //    printf("Ma ky tu he 16: %x \n", (unsigned char)kytu);
+        printf("Ma ky tu he 16: %x \n", (unsigned char)kytu);
 
-    //}
+    }
 
     ////bài 2: yêu cầu nhập vào 2 số nguyên a,b
     //// in ra tổng hiệu tích thương cho mỗi dòng
     //// + - * /
 
-    //float a;
-    //float b;
+    float a;
+    float b;
 
-    //for (int i = 1; i <= 3; i++)
-    //{
-    //    printf("Nhap vao so nguyen a:   ");
-    //    scanf_s("%f", &a);
+    for (int i = 1; i <= 3; i++)
+    {
+        printf("Nhap vao so nguyen a:   ");
+        scanf_s("%f", &a);
 
-    //    printf("Nhap vao so nguyen b:  ");
-    //    scanf_s("%f", &b);
+        printf("Nhap vao so nguyen b:  ");
+        scanf_s("%f", &b);
 
-    //    printf("Phep tinh cong:  %f \n", (a + b));
-    //    printf("Phep tinh hieu:  %f \n", (a - b));
-    //    printf("Phep tinh tich:  %f \n", (a * b));
-    //    printf("Phep tinh thuong:  %f \n", (a / b));
+        printf("Phep tinh cong:  %f \n", (a + b));
+        printf("Phep tinh hieu:  %f \n", (a - b));
+        printf("Phep tinh tich:  %f \n", (a * b));
+        printf("Phep tinh thuong:  %f \n", (a / b));
 
-    //}
+    }
 
 
 
     ////KẾT HỢP CÁC CÂU LỆNH WHILE, FOR AND IF TRONG MỘT BÀI TOÁN
-    //
-    //int a, b;
+    
+    int a, b;
 
-    //char continues = 'y';
+    char continues = 'y';
 
-    //while (continues == 'y' || continues == 'Y') {
+    while (continues == 'y' || continues == 'Y') {
 
-    //    for (int i = 1; i <=3; i++)
-    //    {
+        for (int i = 1; i <=3; i++)
+        {
 
-    //        printf("**** Program Is Run ******  \n");
+            printf("**** Program Is Run ******  \n");
 
-    //        //hiển thị lần tính toán thứ mấy
-    //        printf("******* The Calculator Number: %d *******\n", i);
+            //hiển thị lần tính toán thứ mấy
+            printf("******* The Calculator Number: %d *******\n", i);
 
-    //        //nhập số nguyên a và b
-    //        printf("Input An Integer a:  \n");
-    //        scanf_s("%d", &a);
-    //         
-    //        printf("Input An Integer b:  \n");
-    //        scanf_s("%d", &b);
-    //        // nhập các phép tính + - * /
+            //nhập số nguyên a và b
+            printf("Input An Integer a:  \n");
+            scanf_s("%d", &a);
+             
+            printf("Input An Integer b:  \n");
+            scanf_s("%d", &b);
+            // nhập các phép tính + - * /
 
-    //        printf("*** Calculation addition: %d \n", a + b);
-    //        printf("*** Calculation subtraction: %d  \n", a - b);
-    //        printf("*** Calculation multiplication: %d \n", a * b);
+            printf("*** Calculation addition: %d \n", a + b);
+            printf("*** Calculation subtraction: %d  \n", a - b);
+            printf("*** Calculation multiplication: %d \n", a * b);
 
-    //        // kiểm tra b có đủ điều kiện tính toán không
-    //        if (b!=0)
-    //        {
-    //            printf("*** Calculation division: %.2f\n", (float)a / b);
+            // kiểm tra b có đủ điều kiện tính toán không
+            if (b!=0)
+            {
+                printf("*** Calculation division: %.2f\n", (float)a / b);
 
-    //        }
-    //        else {
-    //            printf("*** Can't divide by 0 ! ");
-    //        }
+            }
+            else {
+                printf("*** Can't divide by 0 ! ");
+            }
 
-    //    }
-    //    // hỏi người dùng có muốn tiếp tục chương trình tính toán
-    //    printf("**** Would Like You To Continue To The Program ? (Y/N) \n");
-    //    scanf_s(" %c", &continues, 1);
+        }
+        // hỏi người dùng có muốn tiếp tục chương trình tính toán
+        printf("**** Would Like You To Continue To The Program ? (Y/N) \n");
+        scanf_s(" %c", &continues, 1);
 
-    //}
-
-
-    //printf("Finish Program");
+    }
 
 
+    printf("Finish Program");
 
-    //int diem = 10;
-    //if (diem >10)
-    //{
-    //    printf("diem khong hop le \n");
-    //}
-    //else if (diem >= 8 )
-    //{
-    //    printf("loai gioi \n");
 
-    //}
-    //else if (diem >= 6.5 )
-    //{
-    //    printf("loai kha \n");
 
-    //}
-    //else if (diem >= 5 )
-    //{
-    //    printf("loai trung binh \n");
+    int diem = 10;
+    if (diem >10)
+    {
+        printf("diem khong hop le \n");
+    }
+    else if (diem >= 8 )
+    {
+        printf("loai gioi \n");
 
-    //}
-    //else {
-    //    printf("loai yeu \n");
+    }
+    else if (diem >= 6.5 )
+    {
+        printf("loai kha \n");
 
-    //}
+    }
+    else if (diem >= 5 )
+    {
+        printf("loai trung binh \n");
+
+    }
+    else {
+        printf("loai yeu \n");
+
+    }
 
 
     //bài 1
@@ -167,6 +167,37 @@ int main(void) {    // Hàm main: chương trình bắt đầu chạy từ đây
     // nếu delta = 0 thì pt có 1 nghiệm kép x1 = x2 = -b /2a
     // nếu delta < 0 thì pt vô nghiệm
     //cần #include <math.h>
+
+    int a, b, c;
+    int delta;
+
+    printf("giai phuong trinh bac 2 ax^2 + bx + c= 0 \n");
+    printf("nhap a:   \n");
+    scanf_s("%d", &a);
+    printf("nhap b:   \n");
+    scanf_s("%d", &b);
+    printf("nhap c:   \n");
+    scanf_s("%d", &c);
+
+    delta = b * b - 4 * a * c;
+
+    if (delta > 0) {
+        float x1 = (-b + sqrt(delta)) / 2*a;
+        float x2 = (-b - sqrt(delta)) / 2 * a;
+        printf("phuong trinh co 2 nghiem phan biet x1 = %.2f, x2 =%.2f \n", x1, x2);
+
+    }
+    else if (delta == 0) {
+
+        float x = -b / (2 * a);
+        printf("phuong trinh co 1 nghiem kep x1=x2=%.2f \n", x);
+
+    }
+    else
+    {
+        printf("phuong trinh vo nghiem");
+    }
+
 
     int a, b, c;
     double delta;
@@ -240,5 +271,80 @@ int main(void) {    // Hàm main: chương trình bắt đầu chạy từ đây
 
     }
     printf("Ket thuc chuong trinh");
+
+    //// vd: in bảng cửu chương
+    for (int i = 1; i <= 10;i++) {
+        printf("2 * %d = %d \n", i, 2 * i);
+    }
+
+
+    //// in bảng cửu chương từ bảng cửu chương 2 đến bảng cửu chương 9
+    //
+
+    for (int i = 2; i <= 9; i++)
+    {
+        // Vòng for bên ngoài:
+        // i = 2: Bắt đầu bảng cửu chương 2
+        // i = 3: Chuyển sang bảng cửu chương 3
+        // ...
+        // i = 9: Bảng cửu chương cuối cùng
+
+        printf("Bang cuu chuong %d\n", i);
+
+        // Vòng for bên trong:
+        // j bắt đầu từ 1 và chạy đến 10
+        // Mỗi lần j tăng thêm 1 đơn vị
+
+        for (int j = 1; j <= 10; j++)
+        {
+            // In phép nhân:
+            // i: Số của bảng cửu chương hiện tại
+            // j: Số nhân từ 1 đến 10
+            // i * j: Kết quả phép nhân
+
+            printf("%d x %d = %d\n", i, j, i * j);
+        }
+
+        // Sau khi vòng for bên trong chạy đủ 10 lần,
+        // in thêm một dòng trống để phân cách các bảng cửu chương.
+
+        // Sau đó vòng for bên ngoài mới tăng i lên 1
+        // và bắt đầu bảng cửu chương tiếp theo.
+        printf("\n");
+    }
+
+
+    //yc: người dùng nhập từ bàn phím số tự nhiên n
+    // tinhs  và in ra giai thừa của n (n!)
+
+     // B1: Khai bao bien n de luu so nguoi dung nhap
+    // B2: Khai bao bien gt de luu ket qua giai thua
+    int n = 0;
+    int gt = 1;
+
+    // B3: Yeu cau nguoi dung nhap so tu nhien n
+    printf("Nhap n: ");
+    scanf_s("%d", &n);
+
+    // B4: Kiem tra n co phai so tu nhien khong
+    if (n < 0)
+    {
+        printf("Vui long nhap so tu nhien!\n");
+    }
+    else
+    {
+        // B5: Su dung vong lap for de tinh giai thua
+        // i bat dau tu 1 va tang dan den n
+        for (int i = 1; i <= n; i++)
+        {
+            // Nhan ket qua hien tai voi i
+            gt = gt * i;
+        }
+
+        // B6: In ket qua giai thua
+        printf("%d! = %d\n", n, gt);
+    }
+
+    
     return 0;  // Kết thúc chương trình thành công
 }

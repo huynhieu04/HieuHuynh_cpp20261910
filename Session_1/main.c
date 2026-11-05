@@ -537,7 +537,104 @@ int main(void) {    // Hàm main: chương trình bắt đầu chạy từ đây
     } while (n != x);
 
     //giả lập atm
+    int step = 1;
+    int mat_khau_user;
+    int mat_khau_sys = 123456;
+    int so_tien_rut = 0;
+    int so_du_atm = 10000000;
+    char tieptuc = 'y';
+    int so_lan_sai = 0;
+    // Vong lap giao dich
+    while (tieptuc == 'y' || tieptuc == 'Y')
+    {
+        // Khoi tao lai trang thai cho giao dich moi
+        step = 1;
+        so_lan_sai = 0;
 
+        while (step != 5)
+        {
+            switch (step)
+            {
+                // Buoc 1: Nhap mat khau
+            case 1:
+                printf("Nhap mat khau: ");
+                scanf_s("%d", &mat_khau_user);
+
+                if (mat_khau_user == mat_khau_sys)
+                {
+                    printf("Dang nhap thanh cong!\n");
+                    step = 2;
+                }
+                else
+                {
+                    so_lan_sai++;
+
+                    printf("Mat khau khong dung!\n");
+
+                    if (so_lan_sai >= 3)
+                    {
+                        printf("Ban da nhap sai mat khau 3 lan!\n");
+                        step = 5;
+                    }
+                    else
+                    {
+                        printf("Ban con %d lan thu.\n", 3 - so_lan_sai);
+                    }
+                }
+
+                break;
+
+                // Buoc 2: Nhap so tien muon rut
+            case 2:
+                printf("Nhap so tien can rut: ");
+                scanf_s("%d", &so_tien_rut);
+
+                step = 3;
+                break;
+
+                // Buoc 3: Kiem tra so du ATM
+            case 3:
+                if (so_tien_rut <= 0)
+                {
+                    printf("So tien rut khong hop le!\n");
+                    step = 2;
+                }
+                else if (so_tien_rut > so_du_atm)
+                {
+                    printf("So tien rut vuot qua so du ATM!\n");
+                    step = 2;
+                }
+                else
+                {
+                    step = 4;
+                }
+
+                break;
+
+                // Buoc 4: Thuc hien giao dich
+            case 4:
+                so_du_atm -= so_tien_rut;
+
+                printf("Rut tien thanh cong: %d VND\n", so_tien_rut);
+                printf("So du ATM con lai: %d VND\n", so_du_atm);
+
+                step = 5;
+                break;
+            }
+        }
+
+        // Neu nhap sai mat khau 3 lan thi ket thuc
+        if (so_lan_sai >= 3)
+        {
+            break;
+        }
+
+        // Buoc 5: Hoi co muon tiep tuc khong
+        printf("\nBan co muon tiep tuc rut tien khong? (y/n): ");
+        scanf_s(" %c", &tieptuc, 1);
+    }
+
+    printf("\nKet thuc chuong trinh!\n");
 
 
     

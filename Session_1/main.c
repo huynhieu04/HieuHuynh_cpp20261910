@@ -636,6 +636,116 @@ int main(void) {    // Hàm main: chương trình bắt đầu chạy từ đây
 
     printf("\nKet thuc chuong trinh!\n");
 
+    ////6. Viết chương trình tìm ước số chung lớn nhất của 2 số nguyên
+    //    Đề bài : Nhập vào 2 số nguyên A, B.in ra màn hình ước số chung lớn nhất của A và B
+    //    * /
+
+        int a, b;
+        int du;
+
+        printf("Nhap so nguyen A: ");
+        scanf_s("%d", &a);
+        printf("Nhap so nguyen B: ");
+        scanf_s("%d", &b);
+
+        if (a < 0 || b < 0) {
+        	printf("Vui long nhap so nguyen duong \n");
+        }
+        else {
+        	while (b != 0) {
+        		du = a % b;
+        		a = b;
+        		b = du;
+        	}
+        	printf("Uoc so chung lon nhat la: %d \n", a);
+        }
+        return 0;
+
+        /*
+        * 68 Viết chương trình tìm bội chung nhỏ nhất của 2 số nguyên
+    Đề bài: Nhập vào 2 số nguyên A, B. in ra màn hình bội chung nhỏ nhất của A và B
+        */
+
+        int a, b;
+        int du;
+        printf("Nhap so nguyen A: ");
+        scanf_s("%d", &a);
+        printf("Nhap so nguyen B: ");
+        scanf_s("%d", &b);
+        if (a < 0) a = -a;
+        if (b < 0) b = -b;
+
+        if (a == 0 || b == 0) {
+        	printf("Khong co boi chung nho nhat \n");
+        }
+        else {
+        	int ucln = a;
+        	int bcnn = b;
+        	while (bcnn != 0) {
+        		du = ucln % bcnn;
+        		ucln = bcnn;
+        		bcnn = du;
+        	}
+        	bcnn = (a * b) / ucln;
+        	printf("Boi chung nho nhat la: %d \n", bcnn);
+        }
+        return 0;
+
+        /*
+
+    9. Viết chương trình mô phỏng việc trả tiền của máy ATM.
+    số tiền nhập vào phải là bội số của 50000. số tiền phải trả về đầy đủ các mệnh giá từ 50000 đến 500000
+    In ra số lượng tờ tiền được rút.
+    VD: người dùng nhập vào 1000000.
+    In ra:
+    2 x 50000
+    2 x 100000
+    1 x 200000
+    1 x 500000*/
+
+     int tienrut;
+
+    // Mang luu cac menh gia tien, sap xep tu lon den nho
+    int menhgia[] = { 500000, 200000, 100000, 50000 };
+
+    int conlai;
+
+    //  Nhap so tien can rut
+    printf("Nhap so tien can rut (boi so cua 50000): ");
+    scanf_s("%d", &tienrut);
+
+    //  Kiem tra so tien
+    if (tienrut <= 0)
+    {
+        printf("So tien rut phai lon hon 0!\n");
+    }
+    else if (tienrut % 50000 != 0)
+    {
+        printf("So tien rut phai la boi so cua 50000!\n");
+    }
+    else
+    {
+        printf("So tien rut: %d\n", tienrut);
+
+        //  Duyet tung menh gia trong mang
+        for (int i = 0; i < 4; i++)
+        {
+            // Tinh so to tien cua menh gia hien tai
+            int soluong = tienrut / menhgia[i];
+
+            // Neu so luong lon hon 0 thi in ra
+            if (soluong > 0)
+            {
+                printf("%d x %d\n", soluong, menhgia[i]);
+
+                // Cap nhat so tien con lai
+                tienrut -= soluong * menhgia[i];
+            }
+        }
+    }
+
+
+
 
     
     return 0;  // Kết thúc chương trình thành công

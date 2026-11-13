@@ -747,6 +747,167 @@ int main(void) {    // Hàm main: chương trình bắt đầu chạy từ đây
 
 
 
-    
-    return 0;  // Kết thúc chương trình thành công
+//    Bai 5: Dem so nguyen to trong mang
+//        Nhap n(1 <= n <= 100) va n so nguyen vao mang.In cac so nguyen to trong mang va dem so luong.Neu khong co, in "Khong co so nguyen to".
+//        Vi du :
+//Input:
+//    7
+//        2 4 5 8 11 15 17
+//        Output :
+//        Cac so nguyen to : 2 5 11 17
+//        So luong : 4
+//        * /
+
+        //int n;
+        //int arr[100];
+        //int count = 0;
+        //
+        //
+        //printf("Nhap so luong phan tu n (1 <= n <= 100): ");
+        //scanf_s("%d", &n);	
+        //
+        //if (n < 1 || n > 100)
+        //{
+        //	printf("Vui long nhap n trong khoang tu 1 den 100!\n");
+        //	return 1;
+        //}
+        //
+        //
+        //for (int i = 0; i < n; i++)
+        //{
+        //	printf("Nhap mang[%d]: ", i);
+        //	scanf_s("%d", &arr[i]);
+        //}
+        //
+        //printf("Cac so nguyen to trong mang la: ");
+        //
+        //
+        //for (int i = 0; i < n; i++)
+        //{
+        //	int la_so_nguyen_to = 1;
+        //
+        //
+        //	if (arr[i] < 2)
+        //	{
+        //		la_so_nguyen_to = 0;
+        //	}
+        //	else
+        //	{
+        //
+        //		for (int j = 2; j <= arr[i] / 2; j++)
+        //		{
+        //			if (arr[i] % j == 0)
+        //			{
+        //				la_so_nguyen_to = 0;
+        //				break;
+        //			}
+        //		}
+        //	}
+        //
+        //	if (la_so_nguyen_to)
+        //	{
+        //		printf("%d ", arr[i]);
+        //		count++;
+        //	}
+        //}
+        //
+        //
+        //if (count == 0)
+        //{
+        //	printf("Khong co so nguyen to.\n");
+        //}
+        //else
+        //{
+        //	printf("\nSo luong: %d\n", count);
+        //}
+        //
+        //return 0;
+
+        /*
+        Bai 6: Dao nguoc mang
+        Nhap n (1 <= n <= 100) va n so nguyen vao mang. Dao nguoc thu tu cac phan tu ngay trong mang ban dau (khong dung mang phu), sau do in mang.
+        Vi du:
+        Input:
+        5
+        1 2 3 4 5
+        Output:
+        5 4 3 2 1
+        */
+        //int n;
+        //int arr[100];
+        //
+        //printf("Nhap so luong phan tu n (1 <= n <= 100): ");
+        //scanf_s("%d", &n);
+        //
+        //if (n < 1 || n > 100)
+        //{
+        //	printf("Vui long nhap n trong khoang tu 1 den 100!\n");
+        //	return 1;
+        //}
+        //
+        //for (int i = 0; i < n; i++)
+        //{
+        //	printf("Nhap mang [%d]:  ", i);
+        //	scanf_s("%d", &arr[i]);
+        //}
+        //
+        //for (int i = 0; i < n / 2; i++)
+        //{
+        //	int temp = arr[i];
+        //	arr[i] = arr[n - 1 - i];
+        //	arr[n - 1 - i] = temp;
+        //}
+        //
+        //printf("Mang sau khi dao nguoc la: ");
+        //for (int i = 0; i < n; i++)
+        //{
+        //	printf("%d ", arr[i]);
+        //}
+        //return 0;
+        /*
+        Bai 7: Tim kiem phan tu trong mang
+        Nhap n (1 <= n <= 100), n so nguyen va so nguyen x. In tat ca vi tri x xuat hien trong mang (vi tri tinh tu 1). Neu khong co, in "Khong tim thay".
+        Vi du:
+        Input:
+        6
+        3 5 3 7 3 9
+        3
+        Output:
+        Vi tri: 1 3 5
+        */
+        int arr[100];
+        int n;
+        int x;
+        int tim_thay = 0;
+
+        printf("Nhap so luong phan tu n (1 <= n <= 100): ");
+        scanf_s("%d", &n);
+
+        if (n < 1 || n > 100)
+        {
+            printf("Vui long nhap n trong khoang tu 1 den 100!\n");
+            return 1;
+        }
+        
+        for (int i = 0; i < n; i++)
+        {
+            printf("nhap mang [%d] ", i);
+            scanf_s("%d", &arr[i]);
+        }
+        printf("Nhap so nguyen x can tim: ");
+        scanf_s("%d", &x);
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] == x)
+            {
+                printf("Vi tri: %d ", i + 1);
+                tim_thay = 1;
+            }
+
+        }
+        if (tim_thay == 0)
+        {
+            printf("Khong tim thay.\n");
+        }
+        return 0;
 }
